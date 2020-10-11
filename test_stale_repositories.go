@@ -271,11 +271,11 @@ func testStaleRepository() {
 }
 
 func main() {
-	f, err := os.OpenFile("test_stale_repositories_log", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
-	if err != nil {
-		log.Println("FAILED TO INIT LOG FILE")
-		return
-	}
-	log.SetOutput(f)
+	// f, err := os.OpenFile("test_stale_repositories_log", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+	// if err != nil {
+	// 	log.Println("FAILED TO INIT LOG FILE")
+	// 	return
+	// }
+	// log.SetOutput(f)
 	testStaleRepository()
 }
