@@ -18,4 +18,4 @@ jobs:
     - name: run script
       run: go run test_stale_repositories.go scripts.go
       env: 
-        GITHUB_OAUTH_TOKEN: ${{secrets.OAUTH_TOKEN}}
+        OAUTH_TOKEN: ${{secrets.OAUTH_TOKEN}}

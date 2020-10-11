@@ -224,7 +224,7 @@ func testStaleRepository() {
 	query := startQuery()
 	var staleRepos []string
 	addressedRepositories := make(map[string]bool)
-	oauth := os.Getenv("GITHUB_OAUTH_TOKEN")
+	oauth := os.Getenv("OAUTH_TOKEN")
 	client := &http.Client{}
 	if oauth == "" {
 		log.Print("No oauth token found. Using unauthenticated client ...")
