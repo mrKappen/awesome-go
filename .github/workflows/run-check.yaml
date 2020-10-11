@@ -15,7 +15,7 @@ jobs:
       run: |
         go get -v -t -d ./...
     - name: get dirs
-      run: echo | ls 
+      run: cd .. && echo | pwd
     - name: run script
       run: go run test_stale_repositories.go scripts.go
       env: 
