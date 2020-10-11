@@ -14,8 +14,8 @@ jobs:
     - name: Get dependencies
       run: |
         go get -v -t -d ./...
-      name:show dirs
-      run: ls
+    - name: get dirs
+      run: ls 
     - name: run script
       run: go run test_stale_repositories.go scripts.go
       env: 
