@@ -11,11 +11,12 @@ jobs:
       matrix:
        go: ['1.15.x']
     steps:
+    - uses: actions/checkout@1.0.0
     - name: Get dependencies
       run: |
         go get -v -t -d ./...
     - name: get dirs
-      run: ls -R
+      run: pwd
     - name: run script
       run: go run test_stale_repositories.go scripts.go
       env: 
